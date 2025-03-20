@@ -269,6 +269,76 @@
   .delete-btn:hover {
     background: var(--accent-hover);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* زر الهمبرجر */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--primary-color);
+  display: none; /* إخفاؤه على الشاشات الكبيرة */
+}
+
+/* قائمة الروابط */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* القائمة في وضع الهاتف */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* إظهاره على الشاشات الصغيرة */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 377px;
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    border: var(--border-light);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
   
   /* Hero Section */
   .hero {
@@ -779,7 +849,7 @@
     .nav {
       flex-direction: column;
       gap: 15px;
-      margin-top: 15px;
+      margin-top: 85px;
     }
     .hero h1 {
       font-size: 40px;
@@ -1232,3 +1302,109 @@
     from { opacity: 0; transform: translateX(-50px); }
     to { opacity: 1; transform: translateX(0); }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* تنسيقات عامة */
+.App {
+  text-align: center;
+  font-family: 'Cairo', sans-serif; /* من index.html */
+}
+
+.page-container {
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* تنسيقات الهيدر والفوتر (مثال) */
+header, footer {
+  background-color: #00c4cc; /* لون موجود من manifest.json */
+  color: white;
+  padding: 10px;
+}
+
+/* جعل التصميم متجاوبًا مع الموبايل */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px; /* تقليل الهوامش على الموبايل */
+  }
+
+  .page-container {
+    padding: 10px; /* تقليل المسافات */
+  }
+
+  header, footer {
+    padding: 8px; /* تقليل الحشوة */
+    font-size: 14px; /* تقليل حجم الخط */
+  }
+
+  /* تعديل أي عناصر داخلية (مثال) */
+  .patient-list, .chat-container, .booking-form {
+    width: 100%; /* شغل العرض الكامل */
+    margin: 0 auto;
+  }
+
+  button {
+    width: 100%; /* أزرار بعرض كامل على الموبايل */
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    font-size: 12px; /* حجم خط أصغر */
+  }
+
+  .page-container {
+    padding: 5px;
+  }
+
+  /* تنسيق الجداول أو القوائم */
+  table {
+    font-size: 12px;
+    width: 100%;
+    overflow-x: auto; /* تمرير أفقي إذا لزم */
+  }
+}
+
+
+
