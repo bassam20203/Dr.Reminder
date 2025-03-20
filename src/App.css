@@ -602,6 +602,7 @@
   }
   
   /* Bookings */
+  
   .bookings {
     max-width: 1300px;
     margin: 0 auto;
@@ -656,6 +657,8 @@
   .suggest-date-group input, .message-group textarea {
     padding: 10px;
   }
+  
+
   
   /* Patient List */
   .patient-list {
