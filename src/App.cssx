@@ -1,0 +1,1236 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f8f9fb;
+  color: #333;
+  direction: rtl;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo a {
+  color: #00c4cc;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header nav a {
+  margin: 0 20px;
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #00c4cc;
+}
+
+.logout-btn {
+  background: #ff4444;
+  padding: 8px 15px;
+}
+
+.logout-btn:hover {
+  background: #cc3333;
+}
+
+/* Landing Page */
+.landing-page {
+  padding: 100px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  margin: 0 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.primary-btn {
+  background: #00c4cc;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #00a8b0;
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #00c4cc;
+  border: 2px solid #00c4cc;
+}
+
+.secondary-btn:hover {
+  background: #00c4cc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 180px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Notifications Section */
+.notifications {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.notifications h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Stats Section */
+.stats {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  color: #00c4cc;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Quick Actions */
+.quick-actions {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.quick-actions h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.actions-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.action-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 200px;
+}
+
+/* Add Patient */
+.add-patient {
+  padding: 100px 20px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-patient h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.add-patient input, .add-patient select, .add-patient textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-patient textarea {
+  min-height: 100px;
+}
+
+.add-patient ul {
+  list-style: none;
+  padding: 0;
+}
+
+.add-patient li {
+  background: #f5f7fa;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Patient List */
+.patient-list {
+  padding: 100px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patient-list h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.patient-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.patient-list th, .patient-list td {
+  padding: 15px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.patient-list th {
+  background: #00c4cc;
+  color: #fff;
+}
+
+.patient-list tr:hover {
+  background: #f5f7fa;
+}
+.edit-btn {
+  background: #ffcc00;
+  margin: 0 5px;
+}
+
+.edit-btn:hover {
+  background: #e6b800;
+}
+
+.delete-btn {
+  background: #ff4444;
+  margin: 0 5px;
+}
+
+.delete-btn:hover {
+  background: #cc3333;
+}
+/* Chat */
+.chat {
+  padding: 100px 20px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.chat h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.chat select, .chat textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.chat textarea {
+  min-height: 100px;
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f5f7fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.doctor-msg {
+  background: #00c4cc;
+  color: #fff;
+  margin-left: auto;
+}
+
+.patient-msg {
+  background: #555;
+  color: #fff;
+}
+
+.message span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Login */
+.login {
+  padding: 100px 20px 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  padding: 40px 20px;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  color: #00c4cc;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+  color: #777;
+  font-size: 16px;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #00c4cc;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* General Button */
+.btn {
+  padding: 10px 20px;
+  background: #00c4cc;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a8b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+  .header nav a {
+    margin: 10px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons .btn {
+    margin: 10px 0;
+  }
+  .services-grid, .stats-grid, .actions-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f8f9fb;
+  color: #333;
+  direction: rtl;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo a {
+  color: #00c4cc;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header nav a {
+  margin: 0 20px;
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #00c4cc;
+}
+
+.logout-btn {
+  background: #ff4444;
+  padding: 8px 15px;
+}
+
+.logout-btn:hover {
+  background: #cc3333;
+}
+
+/* Patient Portal */
+.patient-portal {
+  padding: 100px 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patient-portal h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.patient-portal h3 {
+  font-size: 24px;
+  color: #00c4cc;
+  margin: 20px 0 10px;
+}
+
+.treatment, .calendar, .chat, .payment, .notifications {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f5f7fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.doctor-msg {
+  background: #00c4cc;
+  color: #fff;
+  margin-left: auto;
+}
+
+.patient-msg {
+  background: #555;
+  color: #fff;
+}
+
+.message span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.payment input, .chat textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.chat textarea {
+  min-height: 100px;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications li {
+  background: #f5f7fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.export-btn {
+  background: #ffcc00;
+}
+
+.export-btn:hover {
+  background: #e6b800;
+}
+
+/* Landing Page */
+.landing-page {
+  padding: 100px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  margin: 0 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.primary-btn {
+  background: #00c4cc;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #00a8b0;
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #00c4cc;
+  border: 2px solid #00c4cc;
+}
+
+.secondary-btn:hover {
+  background: #00c4cc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 180px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Notifications Section */
+.notifications {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.notifications h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Stats Section */
+.stats {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  color: #00c4cc;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 18px;
+  color: #777;
+}
+
+.chart {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Quick Actions */
+.quick-actions {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.quick-actions h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 40px;
+}
+
+.actions-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.action-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 200px;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  padding: 40px 20px;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  color: #00c4cc;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+  color: #777;
+  font-size: 16px;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #00c4cc;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* General Button */
+.btn {
+  padding: 10px 20px;
+  background: #00c4cc;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a8b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+  .header nav a {
+    margin: 10px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons .btn {
+    margin: 10px 0;
+  }
+  .services-grid, .stats-grid, .actions-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f8f9fb, #e0f7fa);
+  color: #333;
+  direction: rtl;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.logo a {
+  color: #00c4cc;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #00c4cc;
+}
+
+.logout-btn {
+  background: #ff4444;
+  padding: 8px 15px;
+}
+
+.logout-btn:hover {
+  background: #cc3333;
+}
+
+/* Patient Portal */
+.patient-portal {
+  padding: 80px 20px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.patient-portal h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.patient-portal h3 {
+  font-size: 24px;
+  color: #00c4cc;
+  margin: 20px 0 10px;
+}
+
+.treatment, .calendar, .chat, .payment, .notifications, .free-consultation {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.treatment:hover, .calendar:hover, .chat:hover, .payment:hover, .notifications:hover, .free-consultation:hover {
+  transform: translateY(-5px);
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f5f7fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.doctor-msg {
+  background: #00c4cc;
+  color: #fff;
+  margin-left: auto;
+}
+
+.patient-msg {
+  background: #555;
+  color: #fff;
+}
+
+.message span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.payment input, .chat textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.payment input:focus, .chat textarea:focus {
+  border-color: #00c4cc;
+  outline: none;
+}
+
+.chat textarea {
+  min-height: 100px;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications li {
+  background: #f5f7fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.export-btn {
+  background: #ffcc00;
+}
+
+.export-btn:hover {
+  background: #e6b800;
+}
+
+/* User Page */
+.user-page {
+  padding: 80px 20px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-page h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.patient-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.patient-details p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.patient-details strong {
+  color: #00c4cc;
+}
+
+/* General Button */
+.btn {
+  padding: 10px 20px;
+  background: #00c4cc;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #00a8b0;
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .nav a {
+    margin: 5px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Bookings */
+.bookings {
+  padding: 80px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookings h2 {
+  font-size: 36px;
+  color: #00c4cc;
+  margin-bottom: 20px;
+}
+
+.bookings table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bookings th, .bookings td {
+  padding: 15px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.bookings th {
+  background: #00c4cc;
+  color: #fff;
+}
+
+.bookings tr:hover {
+  background: #f5f7fa;
+}
+
+.accept-btn {
+  background: #28a745;
+}
+
+.accept-btn:hover {
+  background: #218838;
+}
+
+.reject-btn {
+  background: #dc3545;
+}
+
+.reject-btn:hover {
+  background: #c82333;
+}
+
+.suggest-btn {
+  background: #ffc107;
+}
+
+.suggest-btn:hover {
+  background: #e0a800;
+}
+
+.chat-btn {
+  background: #17a2b8;
+}
+
+.chat-btn:hover {
+  background: #138496;
+}
+
+.bookings input[type="datetime-local"],
+.bookings textarea {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+} */
